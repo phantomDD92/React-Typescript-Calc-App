@@ -1,23 +1,24 @@
-import logo from "./logo.svg";
-import "./App.css";
+// App.jsx
+
+import React from "react";
+import CalculatorForm from "./CalculatorForm";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div className="bg-gray-100 min-h-screen flex flex-col">
+      <header className="bg-blue-500 text-white py-4">
+        <div className="container mx-auto">
+          <h1 className="text-2xl font-bold text-center">Simple Calculator</h1>
+        </div>
       </header>
+      <main className="flex-grow container mx-auto p-4">
+        <CalculatorForm />
+      </main>
+      <footer className="bg-blue-500 text-white py-2">
+        <div className="container mx-auto text-center">
+          <p>&copy; 2024 Simple Calculator App</p>
+        </div>
+      </footer>
     </div>
   );
 }
